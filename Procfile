@@ -1,4 +1,4 @@
-web: gunicorn DJANGO-PORTFOLIO.wsgi
+web: gunicorn portfolio.wsgi
 
 
 
