@@ -16,7 +16,7 @@ import dj_database_url
 if os.path.isfile("env.py"):
     import env
 
-SECRET_KEY = os.environ.get('21q36w4rhgedrtu347yehd5732wetsfgdrxr567w53wer')
+SECRET_KEY = os.environ.get('SECRET_KEY', default='21q36w4rhgedrtu347yehd5732wetsfgdrxr567w53wer')
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -43,9 +43,6 @@ INSTALLED_APPS = [
     'base',
     'cloudinary_storage',
     'cloudinary',
-
-
-
 ]
 
 MIDDLEWARE = [
@@ -123,7 +120,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_STORAGE ='cloudinary_storage.storage.StaticHashedCloudinaryStorage'
+STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
@@ -131,7 +128,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_URL = '/media/'
 
-DEFAULT_FILE_STORAGE ='cloudinary_storage.storage.MediaCloudinaryStorage'
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 
 # Default primary key field type
