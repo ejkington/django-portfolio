@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 import os
+import mimetypes
 import dj_database_url
 if os.path.isfile("env.py"):
     import env
@@ -135,3 +136,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Contact email
 
 CONTACT_EMAIL = 'nfareborg@gmail.com'
+
+# mimetype bug fix
+mimetypes.add_type("text/css", ".css", True)
+mimetypes.add_type("text/html", ".html", True)
