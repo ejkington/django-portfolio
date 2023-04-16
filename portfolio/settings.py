@@ -139,4 +139,3 @@ CONTACT_EMAIL = 'nfareborg@gmail.com'
 
 # mimetype bug fix
 mimetypes.add_type("text/css", ".css", True)
-mimetypes.add_type("text/html", ".html", True)

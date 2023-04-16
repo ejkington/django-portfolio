@@ -7,6 +7,6 @@ def home(request):
 
 
 def my_view(request):
-    response = HttpResponse(open('/static/css/main.css', 'r').read())
+    response = HttpResponse(open('static/css/main.css', 'r').read())
     response['Content-Type'] = 'text/css'
     return response
