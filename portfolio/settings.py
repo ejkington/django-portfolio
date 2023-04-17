@@ -138,5 +138,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CONTACT_EMAIL = 'nfareborg@gmail.com'
 
-# mimetype bug fix
-mimetypes.add_type("text/css", ".css", True)
+# Add MIME types to be served by the application
+MIME_TYPES = {
+    '.css': 'text/css',
+}
