@@ -16,6 +16,14 @@ import mimetypes
 import dj_database_url
 if os.path.isfile("env.py"):
     import env
+    
+# Add MIME types to be served by the application
+MIME_TYPES = {
+    '.css': 'text/css',
+}
+
+# Update mimetypes to include additional MIME types
+mimetypes.add_type(MIME_TYPES['.css'], '.css')
 
 SECRET_KEY = os.environ.get('SECRET_KEY', default='21q36w4rhgedrtu347yehd5732wetsfgdrxr567w53wer')
 
@@ -137,8 +145,3 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Contact email
 
 CONTACT_EMAIL = 'nfareborg@gmail.com'
-
-# Add MIME types to be served by the application
-MIME_TYPES = {
-    '.css': 'text/css',
-}
