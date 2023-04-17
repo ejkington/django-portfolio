@@ -40,6 +40,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['portfolio-django2023.herokuapp.com', "localhost"]
 
+
+SECURE_CONTENT_TYPE_NOSNIFF = False
 # Application definition
 
 INSTALLED_APPS = [
